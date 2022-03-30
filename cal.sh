@@ -1,29 +1,30 @@
 #!/bin/bash
+
 if [ $# -ne 1 ]; then
-  echo "1) add"
-  echo "2) sub"
-  echo "3) div"
-  echo "4) mul"
-  read -p "select menu : " parameter
+	echo "...none operator parameter...."
+  	PS3='select menu : '
+	select parameter in "add" "sub" "div" "mul"
+	do
+  	 break  
+	done
+else parameter="$1"
 fi
 
+echo
 num1=`cat num1.txt`
 echo "num1 : " $num1
 num2=`cat num2.txt`
 echo "num2 : " $num2
+echo "op : " $parameter
 
-case $1 in
-  1) let result=`expr $num1 + $num2` 
-     echo "op : add"
+case $parameter in
+  "add") let result=`expr $num1 + $num2` 
      ;;
-  2) let result=`expr $num1 - $num2`
-     echo "op : sub"
+  "sub") let result=`expr $num1 - $num2`
      ;;
-  3) let result=`expr $num1 / $num2`
-     echo "op : div"
+  "div") let result=`expr $num1 / $num2`
      ;;
-  4) let result=`expr $num1 \* $num2`
-     echo "op : mul"
+  "mul") let result=`expr $num1 \* $num2`
      ;;
 esac
 echo "result : " $result
