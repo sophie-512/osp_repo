@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "project management in github"
 
 if [ $# -ne 1 ]; then
 	echo "...none operator parameter...."
