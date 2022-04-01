@@ -1,8 +1,9 @@
 #!/bin/bash
+echo "project management in github"
 
 if [ $# -ne 1 ]; then
 	echo "...none operator parameter...."
-  	PS3='select menu : '
+  PS3='select menu : '
 	select parameter in "add" "sub" "div" "mul"
 	do
   	 break  
