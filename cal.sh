@@ -2,11 +2,7 @@
 
 if [ $# -ne 1 ]; then
 	echo "...none operator parameter...."
-<<<<<<< HEAD
-  	PS3='select menu : '
-=======
-  PS3='select menu : '
->>>>>>> cf9bc389fb0143ed5e0a2c1c60cb4e7ab9b60af9
+        PS3='select menu : '
 	select parameter in "add" "sub" "div" "mul"
 	do
   	 break  
